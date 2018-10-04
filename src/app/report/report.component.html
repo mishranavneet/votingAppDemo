@@ -1,0 +1,82 @@
+<p>Voting Result</p>
+<!-- <div ng-controller="charactersCtrl">
+    <input ng-model="searchText" placeholder="enter search term here">
+    
+<table border='1'>  
+  
+  <tr>
+  
+    <td><strong>Id</strong></td>
+    <td><strong>Sprint No</strong></td>
+    <td><strong>Team Name</strong></td>
+    <td><strong>Member Name</strong></td>  
+    <td><strong>Comment</strong></td> 
+    <!-- <td>Edit</td>    -->
+    <!-- <td><strong>Delete</strong></td> -->
+   <!-- </tr>  
+  <tr *ngFor="let kk of Repdata;let ind = index">  
+       
+    <td>{{ind + 1}}</td>
+    <td>{{kk.sprintNo}}</td>
+    <td>{{kk.teamName}}</td>
+    <td>{{kk.memberName}}</td>  
+    <td>{{kk.comment}}</td> -->
+    <!-- <td><a (click)="edit(kk)" style="color:blueviolet">Edit</a></td>    -->
+    <!-- <td><a (click)="delete(kk._id)" style="color: red">Delete</a>  </td>  
+  </tr>  
+</table> -->
+
+
+
+<div class='card'>
+    <div class='card-header'>
+        {{pageTitle}}
+    </div>
+    <div class='card-body'>
+        <div class='row'>
+            <div class= 'col-md-2'>Filter by:</div>
+            <div class='col-md-4'>
+                <input type='text'
+                        [(ngModel)]='listFilter'/>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='col-md-6'>
+                <h4>Filtered by: {{listFilter}}</h4>
+            </div>
+        </div>
+        <div class='table-responsive'>
+            <table class='table'>
+                <thead>
+                    <tr>
+                        <!-- <th>
+                            <button class='btn btn-primary'
+                                (click)='toggleImage()'>
+                                {{showImage ? 'Hide' : 'Show'}} Image
+                            </button>
+                        </th> -->
+                        <th>Id</th>
+                        <th>Sprint No</th>
+                        <th>Team Name</th>
+                        <th>Member Name</th>
+                        <th>Comment</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor='let data of Repdata;let ind = index'>
+                        
+                        <td>{{ind + 1}}</td>
+                        <td>{{data.sprintNo}}</td>
+                        <td>{{data.teamName}}</td>
+                        <td>{{data.memberName}}</td>  
+                        <td>{{data.comment}}</td>
+                        <td><a (click)="delete(kk._id)" style="color: red">Delete</a>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+</div>
